@@ -45,7 +45,7 @@ COPY /conf/standalone.xml  /opt/jboss/wildfly/standalone/configuration/
 COPY /conf/standalone.conf /opt/jboss/wildfly/bin/
 
 # Set environment variables for database access
-ENV DB_HOST k289mysql1.vlan50.citrin.ch
+ENV DB_HOST db
 ENV DB_PORT 3306
 ARG DB_NAME
 ENV DB_NAME=${DB_NAME}
