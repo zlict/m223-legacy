@@ -1,0 +1,51 @@
+<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+
+<h2>Elapse Time</h2>
+
+<table>
+  <tr>
+    <th>Call To</th>
+    <th>Git Lab</th>
+    <th>DB</th>
+  </tr>
+  <tr>
+    <td>seconds</td>
+    <td>" + NANOSECONDS.toSeconds(git) + "</td>
+    <td>" + NANOSECONDS.toSeconds(db) + "</td>
+  </tr>
+  <tr>
+    <td>milli seconds</td>
+    <td>" + NANOSECONDS.toMillis(git) + "</td>
+    <td>" + NANOSECONDS.toMillis(db) + "</td>
+  </tr>
+  <tr>
+    <td>micro seconds</td>
+    <td>" + NANOSECONDS.toMicros(git) + "</td>
+    <td>" + NANOSECONDS.toMicros(db) + "</td>
+  </tr>
+  <tr>
+    <td>nanno seconds</td>
+    <td>" + NANOSECONDS.toNanos(git) + "</td>
+    <td>" + NANOSECONDS.toNanos(db) + "</td>
+  </tr>
+</table>
+
+<h2>this is a factor:</h2>

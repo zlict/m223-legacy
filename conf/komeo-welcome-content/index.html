@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+    <title>KOMEO WildFly 11</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="StyleSheet" href="wildfly.css" type="text/css">
+
+    <script>
+        function createURL(request) {
+        var URL;
+        URL  = window.location;
+	    URL += request;
+        return URL;
+        } 
+    </script>
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="content">
+
+            <div class="logo">
+                <img src="komeo.png" alt="komeo ... it's here." border="0" />
+            </div>
+
+		    <h2>Nice You're Here! - This Is Your WildFly Application Server</h2>
+		
+            <h3>4 <b>user</b> Micro-Service</h3>
+			<p>deployed by /user/target/user.war</p>
+
+            <ul>
+			    <li>{json} REST: all GitLab users: <a href="javascript:window.location=createURL('user/all')" >/user/all</a></li>
+			    <li>{json} REST: GitLab user by id: <a href="javascript:window.location=createURL('user/id/4')" >/user/id/{id}</a></li>
+			    <li>{json} REST: GitLab user by name: <a href="javascript:window.location=createURL('user/name/stephan.metzler')" >/user/name/{user.name}</a></li>
+			    <li>get WildFly Server echo: <a href="javascript:window.location=createURL('user/echo/hello WildFly')" >/user/echo/{echo}</a></li>
+			</ul>		
+			
+            <h3>6 <b>gitlab</b> Micro-Service</h3>
+			<p>deployed by /gitlab/target/gitlab.war</p>
+
+            <ul>
+			    <li>{json} REST: invoke user micro-service /user/all: <a href="javascript:window.location=createURL('gitlab/user/gitlab')" >/gitlab/user/gitlab</a></li>
+		        <li>{json} REST: get user stored in DB: <a href="javascript:window.location=createURL('gitlab/user/db')" >/gitlab/user/db</a></li>
+		    	<li>merge all gitlab user to DB: <a href="javascript:window.location=createURL('gitlab/merge')" >/gitlab/merge</a></li>
+				<li>get elapse time to call gitlab vs db: <a href="javascript:window.location=createURL('gitlab/elapse')" >/gitlab/elapse</a></li>
+				<li>get hits since last CI/CD:<a href="javascript:window.location=createURL('gitlab/hits')" >/gitlab/hits</a></li>
+				<li>get WildFly Server echo:<a href="javascript:window.location=createURL('gitlab/echo/hello wildfly')" >/gitlab/echo/{echo}</a></li>				
+		    </ul>
+		    			
+            <h3>Describe here YOUR additional Micro-Services (LBV 1.4 and LB 2) ... feel free to imagine your design!</h3>
+  		
+		    <div class="logo">
+			    <a href="http://jboss.org">
+				    <img src="wildfly_logo.png" alt="WildFly 11... it's here." border="0" />
+			    </a>	
+		    </div>
+        </div>
+    </div>
+</body>
+</html>
